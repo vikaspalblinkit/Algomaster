@@ -21,6 +21,7 @@ int findMajorityElements(int arr[], int n) {
 
 
 // Voting Algorithm to find the majority elements
+// Cool Algorithm to find the majority elements in the codes interview
 int findCandidate(int arr[], int size) {
     int maj_index = 0, count = 1; 
     for (int i = 1; i < size; i++) {
