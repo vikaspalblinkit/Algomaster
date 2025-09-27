@@ -30,7 +30,10 @@ struct Queue
             s2.pop();
         }
     }
+ 
 
+    s1 20 10  
+  
     // Dequeue an item from the queue
     int deQueue()
     {

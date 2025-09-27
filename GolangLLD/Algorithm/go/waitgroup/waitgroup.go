@@ -48,7 +48,29 @@ import (
 	// non blocking calls.
 
 	Unbufffereed channels : strict synchroization, find the values for the max in the current.
-	Send blocks unitl the receiver.
+	Send blocks unitl the receiver. 
+
+
+
+	Prevents Goroutine leaks: If a goroutine is waiting on a channel that no one is reading from, it will block forever.
+	1. context.context for cancellations and timeouts. 
+	2. Adding the timeouts for sames. 
+	
+
+	Race conditions in the goroutines: 
+	1. Occurred when multiple goroutines try to access shared data concurrently..
+	2. Prevents : by mutex and channeles 
+
+	Select stmt used for non-blocking and adding the timouts for the channels
+
+	Explain Fan-in and Fan-out concurrency patterns? 
+	// 
+
+
+
+	Profiling and Tracking : 
+	pprof tool in Go is used to profile the performance of Go programs.
+	
 
 */
 

@@ -24,17 +24,13 @@ int maxProfit(int price[], int start, int end, int y) {
 
 
 
-
-int maxProfitDP()
-
 int main() {
 
     memset(dp, -1, sizeof(dp))
     int price[] = {2,3,5,1,4};
-    int n = sizeof(price)/sizeof(int);
+    int n = sizeof(price)/sizeof(int); 
 
     cout << maxProfit(price, 0, n-1, 1);
-
 
     return 0;
 }

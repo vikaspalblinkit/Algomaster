@@ -22,3 +22,5 @@ int main() {
 	cout << sizeof(ptr);
 	return 0;
 }
+
+/* DP on strings questions */ 

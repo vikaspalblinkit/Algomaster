@@ -58,6 +58,7 @@ func main() {
 
 	Unique event_id or uuid should be used to identify the events at
 	the each steps of the process
+	
 	Different channels in golang concurrency to handle and
 	their use cases for same as well
 	func kafkaConsumer(ch chan<- string) {

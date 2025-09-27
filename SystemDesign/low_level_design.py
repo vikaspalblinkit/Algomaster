@@ -1,24 +1,31 @@
 """
-    - Low level Design / Machine Coding / Pair Programming Round 
-    - How to ace the low level Design Interview. 
+    LLD Topics: 
+    1. Encapsulation: Programs of hiding the internal state and requiring all interaction to be performed through an object's methods.
 
-""" 
+    Isolation Levels: how concurrent transactions are handles / interact with the databases 
+    1. Read Uncommitted Example: Transaction A updates a row but hasn’t committed. Transaction B reads that update — if A rolls back, B saw invalid data.
+        Dirty reads are there. 
+    2. Read Committed 
+        A Transactions reads only the commited data we have. Prevents Dirty reads kos : 
+            Non-repeadables and phathom reads still exists. 
+    3. Repeatable Read
+    4. Serializable : prevents from phathom reads . 
+"""
 
-# Mutable Elements we having so it can be changed. 
-my_list = [1, 2, 3]
-print(my_list) 
-my_list[1] = 12312
-print(my_list)
+class BankAccount:
 
-# my_tuples = (1, 2, "now_changeshere")
-# my_tuples[1] = 22  @ set are mutable elements in the datastructures in the parking in the parking
-my_set = {1, 2, 3, 4, 5}
-my_set = 21 
+    def __init__(self, account_number, balance):
+        self.__account_number = account_number  # Private attribute
+        self.__balance = balance
 
+    def deposit(self, amount):
+        self.__balance += amount
 
-print(my_set)
+    def withdraw(self, amount):
+        if amount <= self.__balance:
+            self.__balance -= amount
+        else:
+            print("Insufficient funds")
 
-
-my_string = 'Python'
-my_string[1] = '1' 
-print(my_string)
+    def get_balance(self):
+        return self.__balance

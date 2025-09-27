@@ -28,7 +28,7 @@ int minStep(int n, int dp[]) {
 	}
 
 	// option 1 
-	int op1 = minStep(n - 1, dp);
+	int op1 = minStep(n - 1, dp); // n-1 
 	int min_step = op1;
 
 	// option 2
@@ -47,7 +47,7 @@ int minStep(int n, int dp[]) {
 		}
 	}
 
-	// then add 1 to its 
+	// then add 1 to its  1 + current steps 
 	dp[n] = 1 + min_step;
 	return dp[n];
 }

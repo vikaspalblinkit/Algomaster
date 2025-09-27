@@ -9,11 +9,14 @@ type Result struct {
 }
 
 func fetch(url string, results chan<- Result, wg *sync.WaitGroup) {
-
+	defer wg.Done()
+	// Simulate fetching the URL
+	results <- Result{URL: url, Err: nil, Body: "Response body"}  
 }
 
 func main() {
-	// worker pool pattern
+	// worker pool pattern 
+	// Sender: chan<-  and Receiver channel: <-chan 
 	urls := []string{
 		"https://example.com/api1",
 		"https://example.com/api2",
@@ -27,4 +30,17 @@ func main() {
 		wg.Add(1)
 		go fetch(url, results, &wg)
 	}
+
+	wg.Wait()
+	close(results) 
+
+	for res := range results {
+		if res.Err != nil {
+			// Handle error
+			continue
+		}
+		// Process the response body
+		println("Fetched:", res.URL, "Body:", res.Body)
+	}
 }
+
