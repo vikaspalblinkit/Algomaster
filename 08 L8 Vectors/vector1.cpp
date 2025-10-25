@@ -80,4 +80,17 @@ void removeChar(char* s, char c)
             s[j++] = s[i];
  
     s[j] = '\0'; // end of the string representation of the string here. 
-}
+} 
+
+
+
+/**
+ 1. Leadership Principle  for amazon and LLD Patterns 
+ 2. 
+ * 
+ */
+ 
+/* 
+ 1. Binary Search on Koko Eating Banana 
+ 2. Answers on the binary searchs 
+ */

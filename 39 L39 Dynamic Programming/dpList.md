@@ -14,6 +14,10 @@ March 8
 5. Longest Valid Parenthesis 
 6. Maximum rectangles of 1's 
 7. Buys and sells stocks 
+ 
+
+ decodes ways 
+ word breaks 
 
 
 ```cpp
@@ -46,4 +50,14 @@ March 8
 	dp[n] = 1 + min_step;
 	return dp[n];
 }
-```
+``` 
+
+/**
+
+	10-12-30 
+
+	unordered_map<int,pair<list<int>:: iterator, int>>  um; 
+	
+
+
+ */

@@ -36,7 +36,9 @@ int fib(int n, int dp[]) {
 
 
 
-// Bottom Up DP time : O(N) , space : O(N)
+// Bottom Up DP time : O(N) , space : O(N) 
+// climibing stairs will have the same problems 
+// dp(i-1), dp(i-2) additions is the state of the ansewers 
 int fibBU(int n) {
     
     int dp[100] = {0};
