@@ -17,6 +17,7 @@ def squareNumWithGenerator(nums):
         yield (i*i)
     
 
+
 nums = squareNums([1,2,3,4]) 
 
 new_results = [x*x for x in [1,2,3,4]] # Shortcut in python to do square in one inline functions 
